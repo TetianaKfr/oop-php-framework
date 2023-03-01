@@ -6,8 +6,8 @@
 <?php endif ?>
 <!--buttons on the admin page-->
 <a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Créer un nouvel article</a>
-<a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Modifier les tags</a>
-<a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Ajouter media</a>
+<!--<a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Modifier les tags</a>
+<a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Ajouter media</a>-->
 <!--Creation of the table (bootstrap)-->
 <table class="table">
     <thead>
@@ -20,14 +20,13 @@
     </thead>
     <tbody>
 <!-- To show information from datadase-->
-        <?php foreach ($params['posts'] as $post) : ?>
+        <?php foreach ($params['tags'] as $tag) : ?>
             <tr>
-                <th scope="row"><?= $post->id ?></th>
-                <td><?= $post->title ?></td>
-                <td><?= $post->getCreatedAt() ?></td>
+                <th scope="row"><?= $tag->id ?></th>
+                <td><?= $tag->name ?></td>
                 <td>
-                    <a href="<?= HREF_ROOT ?>admin/tags/edit/<?= $post->id ?>" class="btn btn-warning">Modifier</a>
-                    <form action="<?= HREF_ROOT ?>admin/tags/delete/<?= $post->id ?>" method="POST" class="d-inline">
+                    <a href="<?= HREF_ROOT ?>admin/tags/edit/<?= $tag->id ?>" class="btn btn-warning">Modifier</a>
+                    <form action="<?= HREF_ROOT ?>admin/tags/delete/<?= $tag->id ?>" method="POST" class="d-inline">
                         <button type="submit" class="btn btn-danger">Supprimer</button>
                     </form>
                 </td>
