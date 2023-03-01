@@ -38,7 +38,7 @@ function submitPostLink()
             <?php endforeach ?>
         </select>
     </div>
-    
+            -->
     <button type="submit"  class="btn btn-primary"><?= isset($params['post']) ? "Enregistrer les modifications" : "Enregistrer mon article" ?></button>
     
     </form>
