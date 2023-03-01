@@ -40,11 +40,11 @@ class TagController extends Controller {
     {
         $this->isAdmin();
 
-        $post = new Tag($this->getDB());
+        $tags = new Tag($this->getDB());
 
         $tags = array_pop($_POST);
 
-        $result = $post->create($_POST, $tags);
+        $result = $tags->create($_POST, $tags);
 
         if ($result) {
             return header('Location:'.HREF_ROOT.'admin/tags');
@@ -56,7 +56,7 @@ class TagController extends Controller {
        // var_dump("Model edit:", $id);
         $this->isAdmin();
 
-        $post = (new Post($this->getDB()))->findById($id);
+        //$post = (new Post($this->getDB()))->findById($id);
         $tags = (new Tag($this->getDB()))->all();
         
         //var_dump("Model edit:", $post);

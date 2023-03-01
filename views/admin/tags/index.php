@@ -5,7 +5,7 @@
     <div class="alert alert-success">Vous êtes connecté!</div>
 <?php endif ?>
 <!--buttons on the admin page-->
-<a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Créer un nouvel article</a>
+<a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Créer un nouvel tag</a>
 <!--<a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Modifier les tags</a>
 <a href="<?= HREF_ROOT ?>admin/tags/create" class="btn btn-success my-3">Ajouter media</a>-->
 <!--Creation of the table (bootstrap)-->
@@ -13,8 +13,7 @@
     <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Titre</th>
-            <th scope="col">Publié le</th>
+            <th scope="col">Tag</th>
             <th scope="col">Actions</th>
         </tr>
     </thead>
